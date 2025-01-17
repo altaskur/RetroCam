@@ -7,7 +7,7 @@ export class HomeComponent extends HTMLElement {
   connectedCallback() {
     this.shadowRoot!.innerHTML = /* html */ `
       <style>
-        @import url('/src/assets/tuiCss/tuicss.css');
+        @import url('assets/tuiCss/tuicss.css');
         div.tui-screen {
           display: flex;
           flex-direction: column;
