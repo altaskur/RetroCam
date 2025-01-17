@@ -1,0 +1,26 @@
+canvas {
+    width: 921px;
+}
+
+
+table {
+    width: 480px;
+    border: 0;
+
+    & td {
+        border: 0;
+        text-align: center;
+        --size: 8px;
+        padding: 0;
+        margin: 0;
+        width: 4px;
+        height: 4px;
+        font-family: monospace;
+
+        font-size: 8px;
+
+        min-width: var(--size);
+        min-height: var(--size);
+
+    }
+}
