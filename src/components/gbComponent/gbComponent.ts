@@ -15,7 +15,7 @@ export class GbComponent extends HTMLElement {
   connectedCallback() {
     this.shadowRoot!.innerHTML = /* html */ `
         <style>
-          @import url("./node_modules/nes.css/css/nes.css");
+          @import url("./nes.css/css/nes.css");
           canvas{
             width: 100%;
           }

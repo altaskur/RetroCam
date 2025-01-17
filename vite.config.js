@@ -1,5 +1,5 @@
 import { defineConfig } from "vite";
-export default defineConfig({
-  base: "https://altaskur.live/RetroCam/",
 
+export default defineConfig({
+    base: '/RetroCam/',
 });

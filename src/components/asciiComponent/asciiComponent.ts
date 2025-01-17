@@ -16,7 +16,7 @@ export class AsciiComponent extends HTMLElement {
   connectedCallback() {
     this.shadowRoot!.innerHTML = /* html */ `
         <style>
-          @import url('assets/tuiCss/tuicss.css');
+          @import url('./tuiCss/tuicss.css');
 
           canvas{
             display: none;

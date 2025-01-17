@@ -7,37 +7,37 @@ export class HomeComponent extends HTMLElement {
   connectedCallback() {
     this.shadowRoot!.innerHTML = /* html */ `
       <style>
-        @import url('assets/tuiCss/tuicss.css');
-        div.tui-screen {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-evenly;
-          height: 100vh;
-        }
+      @import url('./tuiCss/tuicss.css');
+      div.tui-screen {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 100vh;
+      }
 
-        main {
-          height: 100%;
-        }
+      main {
+        height: 100%;
+      }
 
-        fieldset {
-          border: 0;
-          margin: 0;
-        }
+      fieldset {
+        border: 0;
+        margin: 0;
+      }
 
-        article {
-          padding: 8px;
-          padding-top: 16px;
-        }
+      article {
+        padding: 8px;
+        padding-top: 16px;
+      }
 
-        .animate-cursor{
-          animation: blink 1s infinite;
-        }
+      .animate-cursor{
+        animation: blink 1s infinite;
+      }
 
-        @keyframes blink {
-          0% { opacity: 0; }
-          50% { opacity: 1; }
-          100% { opacity: 0; }
-        }
+      @keyframes blink {
+        0% { opacity: 0; }
+        50% { opacity: 1; }
+        100% { opacity: 0; }
+      }
     </style>
 
     <div class="tui-screen bordered blue-168" style="padding: 40px">
@@ -49,43 +49,43 @@ export class HomeComponent extends HTMLElement {
 
     <main>
       <p class="white-168-text">
-        Selecciona la webcam que deseas utilizar:
+      Selecciona la webcam que deseas utilizar:
       </p>
 
       <fieldset class="white-168-text">
-        <label for="webcam">Webcam:</label>
-        <select class="tui-input" id="webcam" name="webcam">
-          <option value="ascii">ASCII WEBCAM</option>
-          <option value="gb">GA Webcam</option>
-        </select>
+      <label for="webcam">Webcam:</label>
+      <select class="tui-input" id="webcam" name="webcam">
+        <option value="ascii">ASCII WEBCAM</option>
+        <option value="gb">GA Webcam</option>
+      </select>
       </fieldset>
 
-        <div class="tui-window orange-168 black-255-text">
-            <fieldset class="tui-fieldset tui-border-solid white-border">
-                <article>
-                  Abre la webcam en modo ASCII dónde <br />
-                  mostrará la imagen de tu webcam en <br />
-                  formato de texto. <span class="cyan-255-text animate-cursor">█</span>
-                </article>
-                <br/>
-                <div class="tui-fieldset-text">Text format: UTF-8</div>
-                <div class="tui-fieldset-text right">Ln: 3, Col: 17</div>
-            </fieldset>
-        </div>
+      <div class="tui-window orange-168 black-255-text">
+        <fieldset class="tui-fieldset tui-border-solid white-border">
+          <article>
+            Abre la webcam en modo ASCII dónde <br />
+            mostrará la imagen de tu webcam en <br />
+            formato de texto. <span class="cyan-255-text animate-cursor">█</span>
+          </article>
+          <br/>
+          <div class="tui-fieldset-text">Text format: UTF-8</div>
+          <div class="tui-fieldset-text right">Ln: 3, Col: 17</div>
+        </fieldset>
+      </div>
     </main>
       <footer>
-        <fieldset>
-          <button class="tui-button scandisk-button"><span class="white-text">C</span>ontinuar</button>
+      <fieldset>
+        <button class="tui-button scandisk-button"><span class="white-text">C</span>ontinuar</button>
 
       </fieldset>
-        <hr class="tui-divider cyan-255-border"/>
-          <span class="cyan-255-text">
-            AltasSO v1.0 <span class="white-168-text"> Made with <span class="red-255-text">❤</span> by Altaskur
-          </span>
+      <hr class="tui-divider cyan-255-border"/>
+        <span class="cyan-255-text">
+        AltasSO v1.0 <span class="white-168-text"> Made with <span class="red-255-text">❤</span> by Altaskur
+        </span>
       </footer>
-  </main>
-</div>
-  `;
+    </main>
+  </div>
+    `;
 
     this.shadowRoot
       ?.querySelector(".scandisk-button")
