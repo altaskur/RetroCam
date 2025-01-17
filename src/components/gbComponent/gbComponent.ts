@@ -87,7 +87,7 @@ export class GbComponent extends HTMLElement {
           <fieldset>
             <i class="nes-octocat animate"></i>
             <div class="nes-balloon from-left is-dark">
-              <p>Visita el Proyecto<br/> en Github</p>
+              <p>Visita el Proyecto<br/> en  <a href="https://github.com/altaskur/RetroCam" target="_blank">Github</a></p>
             </div>
           </fieldset>
           </footer>
