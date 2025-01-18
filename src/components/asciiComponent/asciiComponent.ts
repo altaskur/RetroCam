@@ -143,7 +143,15 @@ export class AsciiComponent extends HTMLElement {
   </div>
 `;
 
-    const resolution: Resolution = { width: 84, height: 45 };
+    const windowWidth = window.innerWidth;
+    let tableColumns = 70;
+
+    if (windowWidth < 800) {
+      tableColumns = 30;
+    }
+
+    const resolution: Resolution = { width: tableColumns, height: 45 };
+    console.log(windowWidth);
     this.shadowRoot
       ?.querySelector("#quit")
       ?.addEventListener("click", this.handleContinueClick.bind(this));

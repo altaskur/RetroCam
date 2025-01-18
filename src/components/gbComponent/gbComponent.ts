@@ -20,8 +20,8 @@ export class GbComponent extends HTMLElement {
             width: 100%;
           }
 
-          .nes-container{
-            min-width: 467px;
+          .nes-container.with-title{
+            height: 90vh;
             background-color: #fff;
           }
 
@@ -40,10 +40,16 @@ export class GbComponent extends HTMLElement {
 
           footer{
             display: flex;
-            flex-direction: flex-end;
+
             gap: 16px;
 
-              & ness-container{
+            @media (max-width: 700px){
+          flex-direction: column;
+          align-items: center;
+        }
+
+       
+              & .ness-container{
                 width: 58%;
               }
 
@@ -61,19 +67,18 @@ export class GbComponent extends HTMLElement {
 
             & .nes-balloon{
               position: absolute;
-              width: max-content;
+              width: min-content;
               transform: translate( -7px, -87px);
             }
           }
         </style>
       <div class="tui-screen bordered blue-168" style="padding: 40px">
         <div class="nes-container with-title">
-          <p class="title">Ga WebCam</p>
-          <div class="cameraContainer">
+
           <div class="canvas-wrapper">
             <canvas></canvas>
             </div>
-          </div>
+
           <footer>
           <div class="nes-container is-rounded is-dark">
             <p>
@@ -99,7 +104,13 @@ export class GbComponent extends HTMLElement {
       ?.querySelector(".scandisk-button")
       ?.addEventListener("click", this.handleContinueClick.bind(this));
 
-    const resolution: Resolution = { width: 84, height: 55 };
+    const windowWidth = window.innerWidth;
+    let tableColumns = 70;
+
+    if (windowWidth < 800) {
+      tableColumns = 30;
+    }
+    const resolution: Resolution = { width: tableColumns, height: 45 };
 
     const getUserCam = async () => {
       const userMedia = await getMediaStream();
